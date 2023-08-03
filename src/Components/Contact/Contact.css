@@ -1,58 +1,93 @@
-.contact-form{
-    padding: 0 3rem 0 3rem;
+
+
+/* Styling for the main container */
+.contact-form {
     display: flex;
-    height: 50vh;
-    margin-top: 3rem;
-    height: 80vh;
-    
-}
-.c-right{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    flex: 1;
-    
-}
-.c-right>form{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: space-between;
     align-items: center;
-}
-.c-right .user{
-    width: 20rem;
-    height: 2rem;
-    padding: 0.3rem;
-    outline: none;
-    border: 2px solid var(--orange);
+    margin: auto;
+    margin-top: 5rem;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f5f5f5;
     border-radius: 8px;
-    font-size: 16px;
-}
-textarea{
-    height: 4rem!important;
-   
-
-}
-.c-left{
-    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 7rem;
+    height: 60vh; 
+  }
+  
+  .c-left {
     display: flex;
-    margin-left: 2rem;
-}
-.c-left :nth-child(1){
-    font-size: xx-large;
+    align-items: center;
+  }
+  
+  .awesome {
+    font-size: 24px;
     font-weight: bold;
-    color: black;
-}
-.c-left :nth-child(2){
+    color: #333;
+  }
+  
+  .awesome span:last-child {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .c-right {
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 1rem;
+  }
+  
+  .user,
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .c-button {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 18px;
     font-weight: bold;
-    color: var(--orange);
-    font-size: xx-large;
-}
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4caf50;
+  }
+  @media screen and (max-width: 600px) {
+    .contact-form {
+      flex-direction: column;
+    }
+    .c-right {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
 
-@media screen  and (max-width:480px) {
+  @media screen  and (max-width:480px) {
     .contact-form{
         display: flex;
         flex-direction: column; 
+        height: auto;
     }
     .c-left .awesome span{
       margin-left: 0rem;
@@ -62,4 +97,5 @@ textarea{
         margin-top: 2rem;
     }
     
-}
+} 
+  

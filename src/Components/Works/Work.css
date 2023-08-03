@@ -1,8 +1,7 @@
 .works{
-    /* padding: 0 3rem 0 3rem; */
+    padding: 0 3rem 0 3rem;
     display: flex;
-    height: 80vh;
-    /* margin-top: 2rem; */
+    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -28,22 +27,27 @@
 .w-mainCircle> :nth-child(1){
     top: -3rem;
     left: 6rem;
+    color: red;
 }
 .w-mainCircle> :nth-child(2){
     left: -3rem;
     top: 5rem;
+    color: green;
 }
 .w-mainCircle> :nth-child(3){
     left: 6rem;
     top: 5rem;
+    color: red;
 }
 .w-mainCircle> :nth-child(4){
     left: 15rem;
     top: 5rem;
+    color: blue;
 }
 .w-mainCircle> :nth-child(5){
     left: 6rem;
     top: 13rem;
+    color: #194988;
 }
 .w-secCircle{
     width: 6rem;

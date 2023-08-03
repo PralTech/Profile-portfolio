@@ -1,0 +1,26 @@
+.f-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form{
+    /* background-color: blue; */
+    height: 25rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-data{
+    display: flex;
+    flex-direction: column;
+}
+.user{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.pass{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,17 @@
+/* Add a pulsating background animation for the body */
+@keyframes pulsateAnimation {
+  0% {
+    background-color: #f5f5f5;
+  }
+  50% {
+    background-color: #e0e0e0;
+  }
+  100% {
+    background-color: #f5f5f5;
+  }
+}
+
+/* Apply the animation to the body */
+body {
+  animation: pulsateAnimation 5s infinite;
+}

@@ -1,12 +1,10 @@
 .services{
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 53vh;
+    /* height: 100vh; */
     margin-bottom: 8rem;
     margin-top: 2rem;
-    margin-bottom: 11rem;
-    /* justify-content: space-between; */
-    
+    margin-bottom: 11rem; /* justify-content: space-between; */ 
 }
 .awesome{
     display: flex;
@@ -28,7 +26,6 @@
     font-size: 14px;
     margin-top: 1rem;
     font-family: serif;
-
 }
 .s-button{
     width: 12rem;
@@ -51,7 +48,7 @@
   .services{
     margin-top: 0rem;
     flex-direction: column;
-    height: 80rem;
+    height: 86rem;
     padding: 0;
     justify-content: start;
     margin-left: 3rem;
@@ -60,13 +57,17 @@
   .cards{
     display: flex;
     flex-direction: column;
-    gap: 18rem;
-    margin-top: 5rem;
+    gap: 2rem;
+    margin-top: 2rem;
   }
   .cards>*{
     position: static;
   }
   .navbar{
     width: 100%;
+  }
+  .s-button{
+    z-index: 1;
+    margin-left: 3rem;
   }
 }

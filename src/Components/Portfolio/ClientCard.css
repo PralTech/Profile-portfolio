@@ -1,0 +1,45 @@
+.client-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 2rem;
+  }
+  
+  .client-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .client-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .client-designation {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  
+  .client-review {
+    font-size: 14px;
+    text-align: center;
+  }
+  @media screen and (max-width: 480px) {
+    .client-card {
+      width: 10px; 
+    }
+  
+    .client-image {
+      width: 20px;
+      height: 20px;
+    }
+  }

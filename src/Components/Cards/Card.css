@@ -1,4 +1,4 @@
-.card{
+/* .card{
     width: 10rem;
     height: 14rem;
     position: absolute;
@@ -27,8 +27,7 @@
  .card > img{
   transform: scale(0.8);
   border-radius: 100%;
-  /* border: 2px solid black; */
-  /* margin-top: 1rem; */
+
  }
  .c-button{
      background: white;
@@ -46,4 +45,66 @@
    width: 15rem;
    height: 15rem;
  }
- }
+ } */
+
+
+
+ /* chatGpt  */
+
+
+
+ .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    height: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  }
+  
+  .card .heading {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .card .detail{
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .card .c-button {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card .c-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .card:hover {
+    transform: translateY(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,58 +1,97 @@
-import React from 'react'
-import './Navbar.css'
-import { Link } from 'react-router-dom'
-
+import React, { useState } from 'react';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const handleToggle = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const handleLinkClick = () => {
+    setIsCollapsed(false);
+  };
+
+
+
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
-      <div className="container-fluid">
-        <span className='navbar-brand text-black'>Pr@l-Tech</span>
-        <button className="navbar-toggler" type="button"
-          data-bs-toggle="collapse"
-           data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-black">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-            </li>
+    <nav className="custom-navbar">
+            <span className="custom-brand">Pr@l-Tech</span>
+      <div className="custom-container">
+          <button
+            className={`hamburger-menu ${isCollapsed ? 'active' : ''}`}
+            type="button"
+            aria-label="Toggle navigation"
+            onClick={handleToggle}
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/Services">Services</Link>
-            </li>
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/Work" >Work</Link>
+        <div className={`custom-collapse ${isCollapsed ? 'active' : ''}`}>
+          <ul className="custom-nav">
+            <li className="custom-item">
+              <Link className="custom-link active" to="/" 
+              onClick={handleLinkClick}
+              >
+                Home
+              </Link>
             </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/Portfolio" >Portfolio</Link>
+            <li className="custom-item">
+              <Link className="custom-link" to="/Services"
+              onClick={handleLinkClick}
+              >
+                Services
+              </Link>
             </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/testimonials" >Testimonials</Link>
+            <li className="custom-item">
+              <Link className="custom-link" to="/Work"
+              onClick={handleLinkClick}
+              >
+                Work
+              </Link>
             </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/Contact" >Contact me</Link>
+            <li className="custom-item">
+              <Link className="custom-link " to="/Portfolio"
+              onClick={handleLinkClick}
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li className="custom-item">
+              <Link className="custom-link" to="/testimonials"
+              onClick={handleLinkClick}
+              >
+                Testimonials
+              </Link>
+            </li>
+            <li className="custom-item">
+              <Link className="custom-link" to="/Contact"
+              onClick={handleLinkClick}
+              >
+                Contact me
+              </Link>
             </li>
           </ul>
 
-<form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form>
-
-          
-
+          <form className="custom-search">
+            <input
+              className="custom-search-input"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="custom-search-button" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
     </nav>
-  ) 
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

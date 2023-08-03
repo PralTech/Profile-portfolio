@@ -1,37 +1,59 @@
-import React from 'react'
-import './Home.css'
-import instagram from '../Images/instagram.png'
-import facebook from '../Images/facebook.png'
-import linkedin from '../Images/linkedin.png'
-import github from '../Images/github.png'
-import pralhad1 from '../Images/pralhad1.jpg'
+import React from 'react';
+import './Home.css';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import home3 from '../Images/home3.jpg';
+import PralhadResume from './PralhadResume.pdf';
 
 const Intro = () => {
+  const handleDownloadCV = () => {
+    window.open(PralhadResume, '_blank');
+  };
+
   return (
     <div className="intro">
       <div className="i-left">
         <div className="i-name">
           <span>hey! I Am</span>
           <span>Pralhad Talmale.</span>
-          <span>Frontend Devloper with entry level of experience
-            in web designing and devlopment and <b>excited</b> to be
-             a part of your orgnisation.</span>
+          <span>Frontend Devloper with Hands-on experience
+            in web designing and development and <b>excited</b> to be
+            a part of your organization.</span>
         </div>
-        <button className="button i-button">Hire me</button>
+        <a href='' target='_blank'>
+          <button className="button i-button" onClick={handleDownloadCV}>
+            Hire me
+          </button>
+        </a>
+
         <div className="i-icons">
-          <a href="https://www.instagram.com"><img src={instagram} alt="1" /></a>
-          <a href="https://www.facebook.com"><img src={facebook} alt="2" /></a>
-          <a rel="noreferrer" href="https://www.linkedin.com/in/pralhad-talmale-b32109145/" target="_blank"><img src={linkedin} alt="3" /></a>
-          <a href="https://github.com/PralTech" target="_blank" rel="noreferrer"><img src={github} alt="3" /></a>
+          <a href="https://www.instagram.com" target='_blank'>
+            <InstagramIcon sx={{ fontSize: 45 }} />
+          </a>
+
+          <a href="https://www.facebook.com" target='_blank'>
+            <FacebookIcon sx={{ fontSize: 45 }} />
+          </a>
+
+          <a
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/pralhad-talmale-b32109145/"
+            target="_blank"
+          >
+            <LinkedInIcon sx={{ fontSize: 45 }} />
+          </a>
+          <a href="https://github.com/PralTech" target="_blank" rel="noreferrer">
+            <GitHubIcon sx={{ fontSize: 45 }} />
+          </a>
         </div>
       </div>
       <div className="i-right">
-        <img src={pralhad1} alt="" />
+        <img src={home3} alt="" />
       </div>
-
     </div>
+  );
+};
 
-  )
-}
-
-export default Intro
+export default Intro;

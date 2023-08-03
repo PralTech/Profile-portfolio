@@ -1,7 +1,7 @@
-/* left side */
+/* left side  */
 .intro{
     display: flex;
-    height: 80vh;
+    /* height: 80vh; */
     margin-top: 3rem;
     margin-left: 3rem;
 }
@@ -41,13 +41,13 @@
     margin-top: 2rem;
     display: flex;
     gap: 1rem;
-    transform: scale(0.9);
-    
+    transform: scale(1);    
 }
 
 .i-icons>*{
     transform: scale(1);
     gap: 5rem;
+    color: black;
 
 }
 .i-icons:hover{
@@ -74,7 +74,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .intro{
     display: flex;
     flex-direction: column;
@@ -85,6 +85,7 @@
   .i-right{
     transform: scale(0.6);
     left: -6rem;
+    margin-bottom: 8rem;
   }
   .i-left{
     transform: scale(0.8);

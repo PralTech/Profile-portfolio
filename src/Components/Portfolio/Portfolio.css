@@ -1,12 +1,16 @@
-.portfolio{
+
+/* Add the CSS for the Portfolio component */
+
+.portfolio {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 80vh;
     
-}
-.portfolio span:nth-child(1){
+  }
+  
+  .portfolio span:nth-child(1){
     color: var(--balck);
     font-size: 2rem;
     font-weight: bold;
@@ -15,19 +19,7 @@
     color: var(--orange);
     font-size: 2.5rem;
     font-weight: bold;
-}
-/* slider  */
-.portfolio .Swiper{
-    overflow: visible!important;
-}
-.portfolio-slider{
-    margin-top: 3rem;
-    width: 100%;
-}
-.portfolio-slider .swiper-slide{
-    width: 20rem;
-    margin-left: 3rem;
-   
+    margin-bottom: 2rem;
 }
 .portfolio img{
     width: 12rem;
@@ -35,9 +27,67 @@
     filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
     border-radius: 20px;
 }
-@media screen and (max-width:480px) {
-   .portfolio img{
-    width: 115%;
-   }
-    
-}
+  /* Styling for the Swiper slider */
+  .portfolio-slider {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* Styling for pagination dots */
+  .swiper-pagination {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    opacity: 0.5;
+    border-radius: 50%;
+    margin: 5px;
+    transition: opacity 0.2s ease;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    opacity: 0.8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    opacity: 1;
+  }
+  
+  
+  @media screen and (max-width: 480px) {
+    .client-card{
+      width: 100%;
+    }
+  }
+
+
