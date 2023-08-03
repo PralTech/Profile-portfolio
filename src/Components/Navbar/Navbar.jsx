@@ -13,8 +13,6 @@ const Navbar = () => {
     setIsCollapsed(false);
   };
 
-
-
   return (
     <nav className="custom-navbar">
             <span className="custom-brand">Pr@l-Tech</span>
